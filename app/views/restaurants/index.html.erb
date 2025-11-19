@@ -1,0 +1,12 @@
+<h1>The amazing resto's list</h1>
+<ul>
+
+<%@restaurants.each do |restaurant| %>
+  <li><%=restaurant.name%>
+  <p><%= restaurant.address %> phone number: <%= restaurant.phone_number %> <%= link_to "Show this restaurant", restaurant %></p>
+  </li>
+
+<%end %>
+</ul>
+
+<%= link_to "Add a new resto", new_restaurant_path %>
